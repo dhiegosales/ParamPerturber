@@ -47,14 +47,14 @@ def process_file(file_path, param_limits, parameters):
 
 # Usage example
 if __name__ == "__main__":
-    # Path to the PorousMedia_1.dat file
-    file_path = r"D:\Onedrive\Doutorado\Microbacia_em_Pedro_do_Rio\PorousMedia_1.dat"
+    # Path to the .dat file of from MOHID-Land model
+    file_path = r"D:\PorousMedia_1.dat"
 
     # Lower and upper limits for each parameter (in tuple format). Example of a limit between 95% (0.95) and 105% (1.05)
-    param_limits = (0.70, 1.3)  
+    param_limits = (0.92, 1.05)  
 
     # List of parameters to apply the noise to (you can modify this)
-    parameters = ["THETA_R", "THETA_S", "ALPHA", "N_FIT", "SAT_K", "HORIZONTAL_K_FACTOR"] # Modify only these parameters, for example
+    parameters = ["THETA_R", "THETA_S", "ALPHA", "N_FIT", "SAT_K", "HORIZONTAL_K_FACTOR"] # Modify any parameter that is in the .dat fime you have passed.
 
     # Processing the file
     process_file(file_path, param_limits, parameters)
